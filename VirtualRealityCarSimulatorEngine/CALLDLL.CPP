@@ -6,8 +6,8 @@
 #include <owl\framewin.h>
 #include <owl\dc.h>
 #include <cstring.h>
-#include "carapi.h"
-#include "calldll.h"
+#include "CARAPI.H"
+#include "CALLDLL.H"
 
 class TTestWindow : public TWindow {
   public:

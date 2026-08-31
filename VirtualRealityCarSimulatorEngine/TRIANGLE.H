@@ -8,7 +8,7 @@
 // clipping within a triangle
 
 #include <math.h>
-#include "triplet.h"
+#include "TRIPLET.H"
 
 int Triangle(MyTriplet);
 

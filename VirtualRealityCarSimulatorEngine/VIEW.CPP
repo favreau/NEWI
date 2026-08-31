@@ -3,7 +3,7 @@
 // Module used to draw the current view of the virtual world onto the screen
 //===================================================================================================================//
 
-#include "view.h"
+#include "VIEW.H"
 
 //===================================================================================================================//
 // Draw the current vue onto the screen 

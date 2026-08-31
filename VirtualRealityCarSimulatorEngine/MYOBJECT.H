@@ -6,7 +6,7 @@
 #if !defined(MYOBJECT_H)
 #define MYOBJECT_H
 
-#include "face.h"
+#include "FACE.H"
 
 class MyObject
 {

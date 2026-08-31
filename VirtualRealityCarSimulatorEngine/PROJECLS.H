@@ -14,7 +14,7 @@
 
 #include <owl.h>
 #include <bwcc.h>
-#include "PROJECID.h"
+#include "PROJECID.H"
 
 //REGEN_VARIABLES
 //REGEN_VARIABLES

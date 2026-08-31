@@ -9,8 +9,8 @@
 #include <math.h>
 #include <alloc.h>
 
-#include "triplet.h"
-#include "MyClip.h"
+#include "TRIPLET.H"
+#include "MYCLIP.H"
 
 
 class MyFace

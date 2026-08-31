@@ -1,6 +1,6 @@
 
 
-#include "list.h"
+#include "LIST.H"
 
 //--------------------------------------------------------------------------
 // OList constructor
@@ -80,7 +80,7 @@ int OList::DeleteHead()
     NbItems--;
     Cell *OldHead = Head;
     Head = Head->Next;
-    free(&OldHead);
+    free(OldHead);
     return 1; // non-empty list
   }
   else
@@ -105,13 +105,14 @@ int OList::DeleteTail()
     }
     else                       // more than one item
     {
+      // stop on the next-to-last cell so the tail can be unlinked
       Cell *Current = Head;
-      while (Current->Next != NULL)
+      while (Current->Next->Next != NULL)
       {
         Current = Current->Next;
       }
       free(Current->Next);
-      Current = NULL;
+      Current->Next = NULL;
       return 1;
     }
   }

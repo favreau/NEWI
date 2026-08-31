@@ -2,6 +2,9 @@
    Polygon clipping unit
    ===================================================*/
 
+#if !defined(MYCLIP_H)
+#define MYCLIP_H
+
 #include "bwcc.h"
 
 
@@ -15,7 +18,7 @@
 #define CLIPBOTTOM 3
 #define CLIPTOP    4
 
-typedef struct Poly
+struct Poly
 {
   int   NumVert;
   POINT Verts[20];
@@ -27,3 +30,5 @@ short Inside  (POINT, int);
 void FindIntersect(POINT ,POINT ,int ,POINT *);
 void ClipOne(Poly , Poly *, int );
 Poly ClipPoly(Poly);
+
+#endif // MYCLIP_H

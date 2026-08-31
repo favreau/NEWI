@@ -1,0 +1,32 @@
+# CMake build trees
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+compile_commands.json
+install_manifest.txt
+
+# Build output
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.exe
+*.exp
+*.pdb
+*.ilk
+
+# Viewer output (docs/ screenshots are named view-*.png and stay tracked)
+screenshot_*.png
+frame_*.png
+
+# Borland C++ intermediates
+*.OBJ
+*.TDS
+*.CSM
+*.BAK
+*.$$$
+*.map
+*.MAP

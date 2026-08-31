@@ -7,7 +7,7 @@
 #define TRIPLET_H
 
 #include <windows.h>
-#include "const.h"
+#include "CONST.H"
 
 class MyTriplet
 {            	

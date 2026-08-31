@@ -11,8 +11,8 @@
 #include <string.h>
 #include <conio.h>
 
-#include "myobject.h"
-#include "triangle.h"
+#include "MYOBJECT.H"
+#include "TRIANGLE.H"
 
 class OList
 {

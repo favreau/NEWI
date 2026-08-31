@@ -7,7 +7,7 @@
 #if !defined(CONST_H)
 #define CONST_H
 
-#include "triplet.h"
+#include "TRIPLET.H"
 
 // Angle of vision
 #define KDistance 1000

@@ -1,5 +1,5 @@
 
-#include "dashboar.h"
+#include "DASHBOAR.H"
 
 void LoadDashBoardBitmap(HINSTANCE aInstance)
 {

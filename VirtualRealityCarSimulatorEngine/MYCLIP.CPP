@@ -1,5 +1,5 @@
 
-#include "MyClip.h"
+#include "MYCLIP.H"
 
 // ========================================================================
 // POLYGON CLIPPING UNIT
@@ -130,6 +130,9 @@ void ClipOne(Poly aP1, Poly *aP2, int aSide)
   int   VertexNumber;
 
   aP2->NumVert = 0;
+  // A previous pass can clip the polygon away entirely; without this the
+  // wrap-around below would read Verts[-1].
+  if (aP1.NumVert <= 0) return;
   First = aP1.Verts[aP1.NumVert-1];
   for (VertexNumber = 0; VertexNumber < aP1.NumVert; VertexNumber++)
   {
@@ -166,7 +169,7 @@ void ClipOne(Poly aP1, Poly *aP2, int aSide)
 Poly ClipPoly(Poly aP)
 {
   Poly aC;
-  for (int Side=CLIPTOP; Side<=CLIPTOP; Side++)
+  for (int Side=CLIPLEFT; Side<=CLIPTOP; Side++)
   {
     ClipOne(aP,&aC,Side);
     aP = aC;

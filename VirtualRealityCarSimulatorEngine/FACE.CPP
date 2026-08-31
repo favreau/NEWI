@@ -2,7 +2,7 @@
 //--------------------------------------------------------------------------
 // Unit containing every method used by the object FACE
 //--------------------------------------------------------------------------
-#include "face.h"
+#include "FACE.H"
 
 //===================================================================================================================//
 // Constructor
@@ -115,6 +115,7 @@ void MyFace::Draw(HDC aDC,long int CenterX,long int CenterY,long int Ax,long int
   float lCos;
   float lColor;
   Poly  Face,ClipFace;
+  int   i;
 
   Face.NumVert = NbPoints;
 
@@ -123,13 +124,13 @@ void MyFace::Draw(HDC aDC,long int CenterX,long int CenterY,long int Ax,long int
   if (P[0]->Py <= 0 && P[1]->Py <= 0 && P[2]->Py <= 0 && aMap==0 && MinZ+Az<=200)
   {
     // Piece of road
-    for (int i=0; i< NbPoints;i++)
+    for (i=0; i< NbPoints;i++)
     {
       Face.Verts[i].x = P[i]->Px+Ax;
       Face.Verts[i].y = P[i]->Pz+Az;
     }
     ClipFace = ClipPoly(Face);
-    for (i=0; i<=ClipFace.NumVert; i++)
+    for (i=0; i<ClipFace.NumVert; i++)
     {
       MyTriplet lP;
       lP.SetCoordinates(ClipFace.Verts[i].x,P[0]->Py+Ay,ClipFace.Verts[i].y);
@@ -344,7 +345,8 @@ short MyFace::Shadows(HDC aDC,long int CenterX,long int CenterY,long int Ax,long
   {
     MyTriplet ShadowPoints[4];
     POINT     ShadowDis[4];
-    for (int i=0; i< NbPoints; i++)
+    int       i;
+    for (i=0; i< NbPoints; i++)
     {
       if (P[i]->Px+Ax == aSolPos.Px)
       {

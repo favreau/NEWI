@@ -15,13 +15,13 @@
 #include <iostream.h>
 #include <string.h>
 
-#include "PROJECID.h"
-#include "PROJECT .h"
-#include "PROJECls.h"
+#include "PROJECID.H"
+#include "PROJECT.H"
+#include "PROJECLS.H"
 
-#include "view    .h"
-#include "carapi  .h"
-#include "wing    .h"
+#include "VIEW.H"
+#include "CARAPI.H"
+#include "WING.H"
 
 // -------------------------------
 // List containing all the objects
@@ -938,8 +938,9 @@ void ReadWorld(LPSTR aFileName)
     is>>Tempx;
     is>>Tempy;
     is>>Tempz;
-    P[CptPts++].SetCoordinates(Tempx,Tempy,Tempz);
+    P[CptPts].SetCoordinates(Tempx,Tempy,Tempz);
     Objects[objctr].AddPoint(&P[CptPts]);
+    CptPts++;
   }
 
   //add surfaces

@@ -1,7 +1,7 @@
 //#include <owl\owlpch.h>
 //#include <owl\applicat.h>
 //#include <owl\window.h>
-#include "carapi.h"
+#include "CARAPI.H"
 #include <conio.h>
 void Init(void);
 #pragma startup Init

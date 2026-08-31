@@ -1,7 +1,7 @@
 
 #include <alloc.h>
-#include "myobject.h"
-#include "triangle.h"
+#include "MYOBJECT.H"
+#include "TRIANGLE.H"
 
 //===================================================================================================================//
 // Constructor
@@ -113,7 +113,7 @@ int MyObject::DeleteFace()
     NbFaces--;
     CellFace *OldHeadFace = HeadFace;
     HeadFace = HeadFace->Next;
-    free(&OldHeadFace);
+    free(OldHeadFace);
     return 1; // non-empty list
   }
   else
@@ -132,7 +132,7 @@ int MyObject::DeletePoint()
     NbPoints--;
     CellPoint *OldHeadPoint = HeadPoint;
     HeadPoint = HeadPoint->Next;
-    free(&OldHeadPoint);
+    free(OldHeadPoint);
     return 1; // non-empty list
   }
   else
